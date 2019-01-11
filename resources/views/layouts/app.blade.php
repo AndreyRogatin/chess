@@ -48,6 +48,9 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('home') }}">
+                                Профиль
+                            </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
@@ -65,11 +68,11 @@
         </header>
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
-                <a class="p-2 text-muted" href="#">История шахмат</a>
-                <a class="p-2 text-muted" href="#">Правила игры</a>
-                <a class="p-2 text-muted" href="#">Интересные факты</a>
-                <a class="p-2 text-muted" href="#">Известные шахматисты</a>
-                <a class="p-2 text-muted" href="#">Галерея</a>
+                <a class="p-2 text-muted" href="{{ url('/history') }}">История шахмат</a>
+                <a class="p-2 text-muted" href="{{ url('/rules') }}">Правила игры</a>
+                <a class="p-2 text-muted" href="{{ url('/fact') }}">Интересные факты</a>
+                <a class="p-2 text-muted" href="{{ url('/persons') }}">Известные шахматисты</a>
+                <a class="p-2 text-muted" href="{{ url('/gallery') }}">Галерея</a>
             </nav>
         </div>
         <div class="container">

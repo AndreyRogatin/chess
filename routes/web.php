@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index', ['title' => 'Главная страница']);
-});
+Route::get('/', 'SimplePageController@action');
+Route::get('/history', 'SimplePageController@action');
+Route::get('/rules', 'SimplePageController@action');
+Route::get('/fact', 'SimplePageController@action');
+Route::get('/persons', 'SimplePageController@action');
+Route::get('/gallery', 'SimplePageController@action');
+
+Route::redirect('/index', '/');
 
 Auth::routes();
 
