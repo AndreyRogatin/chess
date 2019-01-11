@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index', ['title' => 'Главная страница']);
 });
 
 Auth::routes();
