@@ -14,8 +14,11 @@ class FactController extends Controller
         $this->data = FactModel::all();
     }
 
-    public function index()
+    public function action()
     {
-        dd($this->data[0]->title);
+        return view('fact', [
+            'title' => 'Интересные факты о шахматах',
+            'data' => $this->data
+        ]);
     }
 }
