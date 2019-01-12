@@ -23,6 +23,8 @@
 <body>
 <div id="app">
     <div class="container">
+
+        <!-- Header -->
         <header class="blog-header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4 pt-1">
@@ -62,10 +64,12 @@
                                 @csrf
                             </form>
                         </div>
-                        @endguest
+                    @endguest
                 </div>
             </div>
         </header>
+
+        <!-- Menu -->
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
                 <a class="p-2 text-muted" href="{{ url('/history') }}">История шахмат</a>
@@ -75,9 +79,13 @@
                 <a class="p-2 text-muted" href="{{ url('/gallery') }}">Галерея</a>
             </nav>
         </div>
+
+        <!-- Banner -->
         <div class="container">
             <img src="/svg/chess.svg">
         </div>
+
+        <!-- Content -->
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
@@ -93,6 +101,8 @@
             </div>
         </main>
     </div>
+
+    <!-- Footer -->
     <footer class="blog-footer">
         <p>&copy; Chess Project 2019</p>
     </footer>

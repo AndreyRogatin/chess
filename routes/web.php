@@ -14,11 +14,16 @@
 Route::get('/', 'SimplePageController@action');
 Route::get('/history', 'SimplePageController@action');
 Route::get('/rules', 'SimplePageController@action');
-Route::get('/fact', 'SimplePageController@action');
+Route::get('/fact', 'FactController@index');
 Route::get('/persons', 'SimplePageController@action');
 Route::get('/gallery', 'SimplePageController@action');
 
 Route::redirect('/index', '/');
+
+Route::get('/{category?}/{id?}', function ($category = 'base', $id = 25) {
+    echo 'Category: ' . $category . '<br>';
+    echo 'Id: ' . $id;
+});
 
 Auth::routes();
 
