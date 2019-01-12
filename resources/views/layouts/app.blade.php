@@ -75,7 +75,7 @@
                 <a class="p-2 text-muted" href="{{ url('/history') }}">История шахмат</a>
                 <a class="p-2 text-muted" href="{{ url('/rules') }}">Правила игры</a>
                 <a class="p-2 text-muted" href="{{ url('/fact') }}">Интересные факты</a>
-                <a class="p-2 text-muted" href="{{ url('/persons') }}">Известные шахматисты</a>
+                <a class="p-2 text-muted" href="{{ url('/persons') }}">Шахматисты</a>
                 <a class="p-2 text-muted" href="{{ url('/gallery') }}">Галерея</a>
             </nav>
         </div>
