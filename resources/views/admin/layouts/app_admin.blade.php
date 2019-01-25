@@ -53,13 +53,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('admin/fact') }}">
+                        <a class="nav-link" href="{{ route('admin.fact.index') }}">
                             <span data-feather="file"></span>
                             Факты
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('admin.person.index') }}">
                             <span data-feather="file-text"></span>
                             Шахматисты
                         </a>

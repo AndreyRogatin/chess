@@ -27,6 +27,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth'] ], function () {
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
-    Route::resource('/fact', 'FactController', ['as'=>'admin']);
+    Route::resources([
+        '/fact' => 'FactController',
+        '/person' => 'PersonController'
+    ], ['as'=>'admin']);
+    //Route::resource('/fact', 'FactController', ['as'=>'admin']);
+    //Route::resource('/person', 'PersonController', ['as'=>'admin']);
 });
 
