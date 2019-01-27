@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
         '/fact' => 'FactController',
         '/person' => 'PersonController'
     ], ['as'=>'admin']);
+    Route::resource('user', 'UserController', ['as' => 'admin'])->only('index');
     //Route::resource('/fact', 'FactController', ['as'=>'admin']);
     //Route::resource('/person', 'PersonController', ['as'=>'admin']);
 });
