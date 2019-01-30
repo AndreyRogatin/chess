@@ -77,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('admin.gallery.index') }}">
                             <span data-feather="layers"></span>
                             Галерея
                         </a>
