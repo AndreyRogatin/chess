@@ -30,7 +30,7 @@ class ImageController extends Controller
     public function create()
     {
         return view('admin.gallery.create', [
-            'title' => 'Добавьте изображенеи в галерею'
+            'title' => 'Добавьте изображение в галерею'
         ]);
     }
 

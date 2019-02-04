@@ -7,5 +7,7 @@
         </div>
     @endif
 
-    You are logged in!
+    <p>
+        Здравствуйте, {{ $user->name }}
+    </p>
 @endsection

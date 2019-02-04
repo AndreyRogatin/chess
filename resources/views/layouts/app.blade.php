@@ -33,7 +33,7 @@
                     </a>
                 </div>
                 <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="/">
+                    <a class="blog-header-logo text-dark" href="{{ url('/') }}">
                         <img src="/svg/chess-top.svg">
                     </a>
                 </div>
@@ -50,8 +50,11 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('admin.index') }}">
+                                Админ панель
+                            </a>
                             <a class="dropdown-item" href="{{ route('home') }}">
-                                Профиль
+                                Личный кабинет
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

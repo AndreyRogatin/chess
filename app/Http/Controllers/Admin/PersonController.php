@@ -6,6 +6,7 @@ use App\Models\PersonModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Mockery\Exception;
 
 class PersonController extends Controller
 {
@@ -54,9 +55,15 @@ class PersonController extends Controller
      */
     public function show(int $id)
     {
-        return view('admin.person.show', [
-            'person' => PersonModel::find($id)
-        ]);
+       $person = PersonModel::find($id);
+
+       if (isset($person)) {
+           return view('admin.person.show', [
+               'person' => $person
+           ]);
+       }
+
+       abort(404);
     }
 
     /**
